@@ -145,7 +145,7 @@ A imagem final possui aproximadamente:
 **docker build + docker images**
 
 ```
-docs/imagens/print1.png
+![Build da imagem](Prints/print01.png)
 ```
 
 ### Print 2
@@ -204,10 +204,8 @@ Todos os dados são apagados.
 
 ### Print 3
 
-![Build da imagem](Prints/print03.png)
-
 ```
-docs/imagens/print3.png
+![Build da imagem](Prints/print03.png)
 ```
 
 ### Print 4
