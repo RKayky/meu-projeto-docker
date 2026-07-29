@@ -83,7 +83,9 @@ docker compose down -v
 
 ## Imagem utilizada
 
-<Prints/print01.png>
+## Print 1 — Build da imagem
+
+![Build da imagem](Prints/print01.png)
 
 node:20-alpine
 ```
