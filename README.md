@@ -83,7 +83,7 @@ docker compose down -v
 
 ## Imagem utilizada
 
-(https://github.com/RKayky/meu-projeto-docker/blob/main/Prints/print01.png)
+<https://github.com/RKayky/meu-projeto-docker/blob/main/Prints/print01.png>
 
 node:20-alpine
 ```
