@@ -153,7 +153,7 @@ docs/imagens/print1.png
 **Aplicação em execução**
 
 ```
-docs/imagens/print2.png
+![Build da imagem](Prints/print02.png)
 ```
 
 ---
@@ -204,7 +204,7 @@ Todos os dados são apagados.
 
 ### Print 3
 
-Sem volume
+![Build da imagem](Prints/print03.png)
 
 ```
 docs/imagens/print3.png
@@ -212,7 +212,7 @@ docs/imagens/print3.png
 
 ### Print 4
 
-Com volume
+![Build da imagem](Prints/print04.png)
 
 ```
 docs/imagens/print4.png
@@ -264,8 +264,7 @@ Isso ocorre porque o Docker mantém um DNS interno responsável por traduzir o n
 ### Print 5
 
 ```
-docs/imagens/print5-1.png
-docs/imagens/print5-2.png
+![Build da imagem](Prints/print07.png)
 ```
 
 ### Print 6
@@ -279,7 +278,8 @@ SELECT * FROM todo_items;
 Imagem:
 
 ```
-docs/imagens/print6.png
+
+![Build da imagem](Prints/print09.png)
 ```
 
 ---
@@ -340,7 +340,8 @@ Foi disponibilizado um modelo:
 ### Print 7
 
 ```
-docs/imagens/print7.png
+
+![Build da imagem](Prints/print013.png)
 ```
 
 ---
@@ -380,7 +381,7 @@ para limpar o ambiente.
 ### Print 8
 
 ```
-docs/imagens/print8.png
+![Build da imagem](Prints/print014.png)
 ```
 
 ---
@@ -430,7 +431,7 @@ https://github.com/RKayky/meu-projeto-docker/pull/1
 ### Print 9
 
 ```
-docs/imagens/print9.png
+![Build da imagem](Prints/print016.png)
 ```
 
 ---
