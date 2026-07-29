@@ -83,16 +83,13 @@ docker compose down -v
 
 ## Imagem utilizada
 
-## Print 1 — Build da imagem
-
-![Build da imagem](Prints/print01.png)
-
+```
 node:20-alpine
 ```
 
 ## Estágios
 
-O Dockerfile foi dividido em dois estágios:
+O Dockerfile foi dividido em dois estágios.
 
 ### Builder
 
@@ -140,21 +137,13 @@ A imagem final possui aproximadamente:
 - menor consumo de armazenamento;
 - menor superfície de ataque.
 
-### Print 1
+### Print 1 — Docker Build e tamanho da imagem
 
-**docker build + docker images**
+![Docker Build](Prints/print01.png)
 
-```
-![Build da imagem](Prints/print01.png)
-```
+### Print 2 — Aplicação em execução
 
-### Print 2
-
-**Aplicação em execução**
-
-```
-![Build da imagem](Prints/print02.png)
-```
+![Aplicação](Prints/print02.png)
 
 ---
 
@@ -202,19 +191,13 @@ Os dados continuam armazenados.
 
 Todos os dados são apagados.
 
-### Print 3
+### Print 3 — Sem volume
 
-```
-![Build da imagem](Prints/print03.png)
-```
+![Sem volume](Prints/print03.png)
 
-### Print 4
+### Print 4 — Com volume
 
-![Build da imagem](Prints/print04.png)
-
-```
-docs/imagens/print4.png
-```
+![Com volume](Prints/print04.png)
 
 ---
 
@@ -239,7 +222,7 @@ Dessa forma:
 
 - aumenta a segurança;
 - evita acesso externo ao banco;
-- reduz superfície de ataque.
+- reduz a superfície de ataque.
 
 ## Resolução de nomes
 
@@ -259,26 +242,19 @@ db
 
 Isso ocorre porque o Docker mantém um DNS interno responsável por traduzir o nome do container para seu endereço IP.
 
-### Print 5
+### Print 5 — Docker Network Inspect
 
-```
-![Build da imagem](Prints/print07.png)
-```
+![Docker Network Inspect](Prints/print07.png)
 
-### Print 6
+### Print 6 — Consulta ao banco
 
-Consulta realizada no banco:
+Consulta executada:
 
 ```sql
 SELECT * FROM todo_items;
 ```
 
-Imagem:
-
-```
-
-![Build da imagem](Prints/print09.png)
-```
+![Consulta MySQL](Prints/print09.png)
 
 ---
 
@@ -335,12 +311,9 @@ Foi disponibilizado um modelo:
 .env.example
 ```
 
-### Print 7
+### Print 7 — Docker Compose PS
 
-```
-
-![Build da imagem](Prints/print013.png)
-```
+![Docker Compose PS](Prints/print013.png)
 
 ---
 
@@ -359,28 +332,24 @@ Workflow localizado em:
 
 ## Etapas executadas
 
-1. valida o compose;
+1. valida o arquivo `compose.yaml`;
 2. realiza o build da imagem;
-3. inicia a aplicação;
+3. inicia toda a aplicação;
 4. aguarda a aplicação responder;
-5. executa um smoke test;
+5. executa um smoke test da API;
 6. remove toda a infraestrutura.
 
-O smoke test verifica se a API consegue criar uma tarefa corretamente.
-
-Mesmo que algum passo falhe, o workflow executa:
+Mesmo que alguma etapa falhe, o workflow executa:
 
 ```bash
 docker compose down -v
 ```
 
-para limpar o ambiente.
+para limpar completamente o ambiente.
 
-### Print 8
+### Print 8 — Execução do GitHub Actions
 
-```
-![Build da imagem](Prints/print014.png)
-```
+![GitHub Actions](Prints/print014.png)
 
 ---
 
@@ -420,17 +389,15 @@ e um novo commit corrigiu o problema.
 
 ## Pull Request
 
-Substitua abaixo pelo link do seu Pull Request:
+Substitua pelo link correto do seu Pull Request:
 
 ```
 https://github.com/RKayky/meu-projeto-docker/pull/1
 ```
 
-### Print 9
+### Print 9 — CI com falha
 
-```
-![Build da imagem](Prints/print016.png)
-```
+![CI Vermelho](Prints/print016.png)
 
 ---
 
@@ -466,7 +433,7 @@ Mesmo após modificar apenas arquivos de documentação, o pipeline apresentou f
 
 Após analisar os logs, foi identificado que a dependência nativa `sqlite3` estava sendo recompilada devido à indisponibilidade do binário pré-compilado.
 
-Esse problema reforçou a importância da análise dos logs antes de assumir que o erro foi causado pela última alteração realizada.
+Esse problema reforçou a importância de analisar os logs antes de concluir que o erro foi causado pela última alteração realizada.
 
 ---
 
@@ -487,12 +454,12 @@ Esse problema reforçou a importância da análise dos logs antes de assumir que
 
 ---
 
-## Autor
+# Autor
 
 **Ryan Kayky Marques Rolins Bastos**
 
-Capacitação em Desenvolvimento Full Stack — iTeam
+Capacitação em Desenvolvimento Full Stack – iTeam
 
-Módulo 11 — DevOps e Cloud Computing
+Módulo 11 – DevOps e Cloud Computing
 
 2026
